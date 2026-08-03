@@ -1,3 +1,5 @@
+import { CurrencySection } from './components/CurrencySection';
+import { MoviesSection } from './components/MoviesSection';
 import { WeatherSection } from './components/WeatherSection';
 
 function App() {
@@ -9,6 +11,8 @@ function App() {
       </header>
       <main className="dashboard">
         <WeatherSection />
+        <CurrencySection />
+        <MoviesSection />
       </main>
       <footer className="app-footer">
         React + Recharts · Spring Boot · APIs públicas (Open-Meteo, AwesomeAPI, TMDB)
