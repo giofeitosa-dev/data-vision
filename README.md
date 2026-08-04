@@ -43,15 +43,25 @@ Abra `http://localhost:5173`.
 A seção de filmes usa a [TMDB API](https://developer.themoviedb.org) (grátis, requer cadastro).
 Sem a chave, as outras seções funcionam normalmente e a de filmes exibe um aviso.
 
-Defina a variável de ambiente antes de iniciar o backend:
+A chave é lida em duas fontes, nesta ordem de prioridade:
 
-```bash
-# Windows PowerShell
-$env:TMDB_API_KEY = "sua-chave-aqui"
+1. **Variável de ambiente** `TMDB_API_KEY`:
 
-# Linux/macOS
-export TMDB_API_KEY="sua-chave-aqui"
-```
+   ```bash
+   # Windows PowerShell
+   $env:TMDB_API_KEY = "sua-chave-aqui"
+
+   # Linux/macOS
+   export TMDB_API_KEY="sua-chave-aqui"
+   ```
+
+2. **Arquivo local** `backend/.datavision-secrets.properties` (recomendado para Windows):
+
+   ```properties
+   app.tmdb.api-key=sua-chave-aqui
+   ```
+
+   Esse arquivo é ignorado pelo git (está no `.gitignore`) — a chave nunca vai para o repositório.
 
 ## APIs consumidas
 

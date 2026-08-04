@@ -57,7 +57,7 @@ export function MoviesSection() {
       {error && (
         <p className="status error">
           {error.includes('TMDB_API_KEY')
-            ? 'Filmes indisponíveis: configure a chave TMDB_API_KEY no backend (backend/README).'
+            ? 'Filmes indisponíveis: configure a chave TMDB (veja a seção "API key do TMDB" no README).'
             : error}
         </p>
       )}
